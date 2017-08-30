@@ -1,0 +1,29 @@
+- var a = [{image:'/asset/images/example.png',title:'文件夹'},{image:'/asset/images/example.png',title:'文件夹'},{image:'/asset/images/example.png',title:'文件夹'},{image:'/asset/images/example.png',title:'文件夹'},{image:'/asset/images/example.png',title:'文件夹'},{image:'/asset/images/example.png',title:'文件夹'}]
+include ./components/header
+	div.row
+		include ./components/nav
+		div.row
+			ul
+				each item,key in a
+					li.col.s12.l2.grid-example
+						div.card.hoverable
+							div.card-image
+								img(src=item.image)
+							div.card-content
+								p.flow-text= item.title
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+include ./components/footer
