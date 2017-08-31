@@ -1,0 +1,14 @@
+- var navSide = JSON.parse(data)
+ul(data-collapsible="accordion").collapsible.side-nav.fixed.grey
+	li.grey.darken-2
+		div
+			p.server-title.flow-text.center-align 后台管理系统
+	each val,key in navSide
+		li
+			div.collapsible-header #{val.title}
+				i.material-icons #{val.ico}
+			div.collapsible-body
+				div.collection.my-col
+					each child in val.children
+						a(href= child.c_url).collection-item.grey.lighten-1
+							span #{child.c_title}

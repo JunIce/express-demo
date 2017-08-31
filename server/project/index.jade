@@ -1,0 +1,34 @@
+include ./components/header
+include ./components/leftSide
+
+
+div.row.pd-left
+	div.col.s12
+		div.nav-wrapper
+			a(href="#")
+				h4.page-title 增加信息
+		div.col.s8
+
+			div
+				div.input-field
+					h5 文章标题
+					input(type="text", placeholder="请输入标题", length=20)
+				
+				div.file-field.input-field
+					h5 文字配图
+					div.btn
+						span 图片上传
+						input(type="file")
+					div.file-path-wrap
+						input.file-path.validate(type="text")
+
+				div.input-field
+					h5 文章正文
+					textarea#textarea1.materialize-textarea.context-area
+
+				button(type="submit" , name="action").btn.waves-effect.waves-light.right.btn-large 提交
+					i.material-icons.right send
+
+
+
+include ./components/footer
